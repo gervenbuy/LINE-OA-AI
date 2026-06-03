@@ -35,7 +35,6 @@
         }
     </script>
     <style>
-        /* Custom styles for smooth animations */
         .fade-in-up {
             animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
             opacity: 0;
@@ -46,10 +45,7 @@
         .delay-300 { animation-delay: 300ms; }
         
         @keyframes fadeInUp {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            to { opacity: 1; transform: translateY(0); }
         }
     </style>
 </head>
@@ -68,12 +64,10 @@
                 <div class="hidden md:flex space-x-8 items-center">
                     <a href="#pain-points" class="text-gray-600 hover:text-brand-600 font-medium transition-colors">賣家痛點</a>
                     <a href="#syllabus" class="text-gray-600 hover:text-brand-600 font-medium transition-colors">課程架構</a>
-                    <a href="#benefits" class="text-gray-600 hover:text-brand-600 font-medium transition-colors">預期收穫</a>
                     <a href="#register" class="bg-brand-600 hover:bg-brand-700 text-white px-6 py-2.5 rounded-full font-medium transition-all transform hover:scale-105 shadow-md shadow-brand-500/30">
                         立即報名
                     </a>
                 </div>
-                <!-- Mobile menu button (visual only for this demo) -->
                 <div class="md:hidden flex items-center">
                     <button class="text-gray-600 hover:text-gray-900 focus:outline-none">
                         <i class="ph ph-list text-3xl"></i>
@@ -85,10 +79,9 @@
 
     <!-- Hero Section -->
     <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
-        <!-- Background decorative elements -->
         <div class="absolute top-0 left-0 w-full h-full bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-brand-100 via-white to-white -z-10"></div>
-        <div class="absolute -top-24 -right-24 w-96 h-96 bg-brand-200 rounded-full mix-blend-multiply filter blur-3xl opacity-50 animate-blob"></div>
-        <div class="absolute top-48 -left-24 w-72 h-72 bg-shopee-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-2000"></div>
+        <div class="absolute -top-24 -right-24 w-96 h-96 bg-brand-200 rounded-full mix-blend-multiply filter blur-3xl opacity-50"></div>
+        <div class="absolute top-48 -left-24 w-72 h-72 bg-shopee-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30"></div>
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="text-center max-w-4xl mx-auto fade-in-up">
@@ -125,37 +118,27 @@
                 <h2 class="text-3xl font-bold text-gray-900 mb-4">做電商，你是否也遇到這些「瓶頸」？</h2>
                 <div class="w-24 h-1 bg-brand-500 mx-auto rounded-full"></div>
             </div>
-            
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Pain Point 1 -->
                 <div class="bg-gray-50 rounded-2xl p-8 border border-gray-100 hover:shadow-lg transition-shadow fade-in-up delay-100">
                     <div class="w-14 h-14 bg-red-100 text-red-600 rounded-xl flex items-center justify-center mb-6 text-3xl">
                         <i class="ph-fill ph-chats-circle"></i>
                     </div>
                     <h3 class="text-xl font-bold text-gray-900 mb-3">客服輪迴，心力交瘁</h3>
-                    <p class="text-gray-600 leading-relaxed">
-                        「請問有現貨嗎？」「出貨了嗎？」「尺寸怎麼選？」每天花大量時間回覆 80% 重複性的問題，根本沒時間思考行銷與選品。
-                    </p>
+                    <p class="text-gray-600 leading-relaxed">「請問有現貨嗎？」「出貨了嗎？」「尺寸怎麼選？」每天花大量時間回覆 80% 重複性的問題，根本沒時間思考行銷與選品。</p>
                 </div>
-                <!-- Pain Point 2 -->
                 <div class="bg-gray-50 rounded-2xl p-8 border border-gray-100 hover:shadow-lg transition-shadow fade-in-up delay-200">
                     <div class="w-14 h-14 bg-orange-100 text-orange-600 rounded-xl flex items-center justify-center mb-6 text-3xl">
                         <i class="ph-fill ph-trend-down"></i>
                     </div>
                     <h3 class="text-xl font-bold text-gray-900 mb-3">商品上架，宛如石沉大海</h3>
-                    <p class="text-gray-600 leading-relaxed">
-                        用心拍照寫文案，商品卻永遠排在搜尋頁面後幾頁。不知道蝦皮演算法要什麼，自然流量趨近於零，只能靠燒錢打廣告。
-                    </p>
+                    <p class="text-gray-600 leading-relaxed">用心拍照寫文案，商品卻永遠排在搜尋頁面後幾頁。不知道蝦皮演算法要什麼，自然流量趨近於零，只能靠燒錢打廣告。</p>
                 </div>
-                <!-- Pain Point 3 -->
                 <div class="bg-gray-50 rounded-2xl p-8 border border-gray-100 hover:shadow-lg transition-shadow fade-in-up delay-300">
                     <div class="w-14 h-14 bg-purple-100 text-purple-600 rounded-xl flex items-center justify-center mb-6 text-3xl">
                         <i class="ph-fill ph-money"></i>
                     </div>
                     <h3 class="text-xl font-bold text-gray-900 mb-3">廣告費狂飆，利潤被吃光</h3>
-                    <p class="text-gray-600 leading-relaxed">
-                        站內關鍵字廣告點擊成本越來越高，轉單率卻沒提升。想找網紅合作帶貨又怕踩雷付了錢沒效果，不懂如何佈局站外分潤機制。
-                    </p>
+                    <p class="text-gray-600 leading-relaxed">站內關鍵字廣告點擊成本越來越高，轉單率卻沒提升。想找網紅合作帶貨又怕踩雷付了錢沒效果，不懂如何佈局站外分潤機制。</p>
                 </div>
             </div>
         </div>
@@ -163,18 +146,14 @@
 
     <!-- Course Syllabus Section -->
     <section id="syllabus" class="py-20 bg-gray-900 text-white relative overflow-hidden">
-        <!-- decorative bg -->
         <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
-        
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="text-center mb-16">
                 <span class="text-brand-400 font-semibold tracking-wider uppercase text-sm mb-2 block">Course Syllabus</span>
                 <h2 class="text-3xl md:text-4xl font-bold mb-4">三大模組，對症下藥打造自動化營收</h2>
                 <p class="text-gray-400 max-w-2xl mx-auto">從防守到進攻，觀念與實作工具雙軌並行，保證課後帶著成果走。</p>
             </div>
-
             <div class="space-y-8">
-                <!-- Module 1 -->
                 <div class="bg-gray-800 rounded-2xl p-8 md:p-10 border border-gray-700 flex flex-col md:flex-row gap-8 items-center transform transition duration-300 hover:scale-[1.01]">
                     <div class="w-full md:w-1/3 flex flex-col items-center text-center">
                         <div class="w-20 h-20 bg-line-500/20 text-line-500 rounded-full flex items-center justify-center text-4xl mb-4">
@@ -185,23 +164,12 @@
                     </div>
                     <div class="w-full md:w-2/3">
                         <ul class="space-y-4 text-gray-300">
-                            <li class="flex items-start gap-3">
-                                <i class="ph-bold ph-check-circle text-brand-400 mt-1 flex-shrink-0"></i>
-                                <span><strong>基礎建設與分流：</strong>盤點 Top 10 常見問題，規劃圖文選單動線，引導顧客自主找答案。</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <i class="ph-bold ph-check-circle text-brand-400 mt-1 flex-shrink-0"></i>
-                                <span><strong>IA 核心邏輯設定：</strong>拆解關鍵字回覆，設計「引導式客服腳本」，告別死板回覆。</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <i class="ph-bold ph-check-circle text-brand-400 mt-1 flex-shrink-0"></i>
-                                <span><strong>人機協作與標籤：</strong>無縫轉交真人客服設定，並運用 Tag 精準紀錄需求，為再行銷鋪路。</span>
-                            </li>
+                            <li class="flex items-start gap-3"><i class="ph-bold ph-check-circle text-brand-400 mt-1 flex-shrink-0"></i><span><strong>基礎建設與分流：</strong>盤點 Top 10 常見問題，規劃圖文選單動線，引導顧客自主找答案。</span></li>
+                            <li class="flex items-start gap-3"><i class="ph-bold ph-check-circle text-brand-400 mt-1 flex-shrink-0"></i><span><strong>IA 核心邏輯設定：</strong>拆解關鍵字回覆，設計「引導式客服腳本」，告別死板回覆。</span></li>
+                            <li class="flex items-start gap-3"><i class="ph-bold ph-check-circle text-brand-400 mt-1 flex-shrink-0"></i><span><strong>人機協作與標籤：</strong>無縫轉交真人客服設定，並運用 Tag 精準紀錄需求，為再行銷鋪路。</span></li>
                         </ul>
                     </div>
                 </div>
-
-                <!-- Module 2 -->
                 <div class="bg-gray-800 rounded-2xl p-8 md:p-10 border border-gray-700 flex flex-col md:flex-row gap-8 items-center transform transition duration-300 hover:scale-[1.01]">
                     <div class="w-full md:w-1/3 flex flex-col items-center text-center">
                         <div class="w-20 h-20 bg-shopee-500/20 text-shopee-500 rounded-full flex items-center justify-center text-4xl mb-4">
@@ -212,23 +180,12 @@
                     </div>
                     <div class="w-full md:w-2/3">
                         <ul class="space-y-4 text-gray-300">
-                            <li class="flex items-start gap-3">
-                                <i class="ph-bold ph-check-circle text-brand-400 mt-1 flex-shrink-0"></i>
-                                <span><strong>底層邏輯破解：</strong>掌握蝦皮搜尋權重規則，發掘零銷量新品必爭的「長尾關鍵字」。</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <i class="ph-bold ph-check-circle text-brand-400 mt-1 flex-shrink-0"></i>
-                                <span><strong>AI 提示詞實戰：</strong>獨家 ChatGPT/Gemini Prompt，一鍵生成高排名商品標題與五大賣點。</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <i class="ph-bold ph-check-circle text-brand-400 mt-1 flex-shrink-0"></i>
-                                <span><strong>高轉換頁面佈局：</strong>首圖視覺設計訣竅、詳情頁痛點文案撰寫，建立信任感大幅提升轉換率。</span>
-                            </li>
+                            <li class="flex items-start gap-3"><i class="ph-bold ph-check-circle text-brand-400 mt-1 flex-shrink-0"></i><span><strong>底層邏輯破解：</strong>掌握蝦皮搜尋權重規則，發掘零銷量新品必爭的「長尾關鍵字」。</span></li>
+                            <li class="flex items-start gap-3"><i class="ph-bold ph-check-circle text-brand-400 mt-1 flex-shrink-0"></i><span><strong>AI 提示詞實戰：</strong>獨家 ChatGPT/Gemini Prompt，一鍵生成高排名商品標題與五大賣點。</span></li>
+                            <li class="flex items-start gap-3"><i class="ph-bold ph-check-circle text-brand-400 mt-1 flex-shrink-0"></i><span><strong>高轉換頁面佈局：</strong>首圖視覺設計訣竅、詳情頁痛點文案撰寫，建立信任感大幅提升轉換率。</span></li>
                         </ul>
                     </div>
                 </div>
-
-                <!-- Module 3 -->
                 <div class="bg-gray-800 rounded-2xl p-8 md:p-10 border border-gray-700 flex flex-col md:flex-row gap-8 items-center transform transition duration-300 hover:scale-[1.01]">
                     <div class="w-full md:w-1/3 flex flex-col items-center text-center">
                         <div class="w-20 h-20 bg-yellow-500/20 text-yellow-500 rounded-full flex items-center justify-center text-4xl mb-4">
@@ -239,18 +196,9 @@
                     </div>
                     <div class="w-full md:w-2/3">
                         <ul class="space-y-4 text-gray-300">
-                            <li class="flex items-start gap-3">
-                                <i class="ph-bold ph-check-circle text-brand-400 mt-1 flex-shrink-0"></i>
-                                <span><strong>AMS 機制解析：</strong>看懂 CPS (只為成功訂單付費) 模式，免除無效點擊浪費預算。</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <i class="ph-bold ph-check-circle text-brand-400 mt-1 flex-shrink-0"></i>
-                                <span><strong>佣金策略設定：</strong>爆品帶流量 vs 利潤款賺錢，如何設定精準分潤比例吸引推廣者。</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <i class="ph-bold ph-check-circle text-brand-400 mt-1 flex-shrink-0"></i>
-                                <span><strong>SEO x AMS 綜效：</strong>為什麼做過 AI SEO 的頁面，網紅更願意主動幫你帶貨？觀念一次打通。</span>
-                            </li>
+                            <li class="flex items-start gap-3"><i class="ph-bold ph-check-circle text-brand-400 mt-1 flex-shrink-0"></i><span><strong>AMS 機制解析：</strong>看懂 CPS (只為成功訂單付費) 模式，免除無效點擊浪費預算。</span></li>
+                            <li class="flex items-start gap-3"><i class="ph-bold ph-check-circle text-brand-400 mt-1 flex-shrink-0"></i><span><strong>佣金策略設定：</strong>爆品帶流量 vs 利潤款賺錢，如何設定精準分潤比例吸引推廣者。</span></li>
+                            <li class="flex items-start gap-3"><i class="ph-bold ph-check-circle text-brand-400 mt-1 flex-shrink-0"></i><span><strong>SEO x AMS 綜效：</strong>為什麼做過 AI SEO 的頁面，網紅更願意主動幫你帶貨？觀念一次打通。</span></li>
                         </ul>
                     </div>
                 </div>
@@ -267,7 +215,6 @@
                     <div>
                         <h3 class="text-3xl font-bold mb-4">立刻報名實戰營</h3>
                         <p class="text-brand-100 mb-8 leading-relaxed">投資半天時間，由大軍老師帶你建置自動化獲利系統。</p>
-                        
                         <div class="space-y-6">
                             <div class="flex items-start gap-4">
                                 <div class="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center flex-shrink-0 mt-1">
@@ -291,7 +238,6 @@
                             </div>
                         </div>
                     </div>
-                    
                     <div class="mt-8 pt-6 border-t border-brand-500/50">
                         <div class="flex justify-between items-end mb-4">
                             <div>
@@ -318,11 +264,11 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Form Input Side -->
                 <div class="w-full md:w-7/12 p-10 relative">
-                    
-                    <!-- Success Message Overlay (Hidden by default) -->
+
+                    <!-- Success Overlay -->
                     <div id="success-overlay" class="absolute inset-0 bg-white z-10 flex flex-col items-center justify-center p-8 text-center hidden">
                         <div class="w-20 h-20 bg-green-100 text-green-500 rounded-full flex items-center justify-center text-5xl mb-6">
                             <i class="ph-bold ph-check"></i>
@@ -334,71 +280,81 @@
                         </button>
                     </div>
 
-                    <form id="registration-form" class="space-y-4" onsubmit="handleFormSubmit(event)">
+                    <!-- ===== 報名表單 ===== -->
+                    <form id="registration-form" class="space-y-4">
                         <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
                             <div>
                                 <label for="name" class="block text-sm font-medium text-gray-700 mb-1">姓名 <span class="text-red-500">*</span></label>
-                                <input type="text" id="name" name="姓名" required class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-colors outline-none" placeholder="王大明">
+                                <input type="text" id="name" required class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-colors outline-none" placeholder="王大明">
                             </div>
                             <div>
                                 <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">電話 <span class="text-red-500">*</span></label>
-                                <input type="tel" id="phone" name="電話" required class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-colors outline-none" placeholder="0912345678">
+                                <input type="tel" id="phone" required class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-colors outline-none" placeholder="0912345678">
                             </div>
                         </div>
 
                         <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
                             <div>
                                 <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email <span class="text-red-500">*</span></label>
-                                <input type="email" id="email" name="Email" required class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-colors outline-none" placeholder="example@email.com">
+                                <input type="email" id="email" required class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-colors outline-none" placeholder="example@email.com">
                             </div>
                             <div>
                                 <label for="lineId" class="block text-sm font-medium text-gray-700 mb-1">LINE ID</label>
-                                <input type="text" id="lineId" name="LINE ID" class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-colors outline-none" placeholder="您的 LINE ID">
+                                <input type="text" id="lineId" class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-colors outline-none" placeholder="您的 LINE ID">
                             </div>
                         </div>
 
                         <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
                             <div>
                                 <label for="company" class="block text-sm font-medium text-gray-700 mb-1">公司名稱 <span class="text-red-500">*</span></label>
-                                <input type="text" id="company" name="公司名稱" required class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-colors outline-none" placeholder="滔滔股份有限公司">
+                                <input type="text" id="company" required class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-colors outline-none" placeholder="滔滔股份有限公司">
                             </div>
                             <div>
                                 <label for="industry" class="block text-sm font-medium text-gray-700 mb-1">產業別 <span class="text-red-500">*</span></label>
-                                <input type="text" id="industry" name="產業別" required class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-colors outline-none" placeholder="例如：零售、服飾、保健品">
+                                <select id="industry" required class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-colors outline-none bg-white">
+                                    <option value="" disabled selected>請選擇產業</option>
+                                    <option value="實體零售 / 餐飲">實體零售 / 餐飲</option>
+                                    <option value="在地服務 (美容/美髮/診所等)">在地服務 (美容/美髮/診所等)</option>
+                                    <option value="業務性質 (房仲/保險/直銷)">業務性質 (房仲/保險/直銷)</option>
+                                    <option value="個人品牌 / 自媒體創作者">個人品牌 / 自媒體創作者</option>
+                                    <option value="B2B 企業">B2B 企業</option>
+                                    <option value="其他">其他</option>
+                                </select>
                             </div>
                         </div>
 
                         <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
                             <div>
                                 <label for="plan" class="block text-sm font-medium text-gray-700 mb-1">方案選擇 <span class="text-red-500">*</span></label>
-                                <select id="plan" name="方案選擇" required class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-colors outline-none bg-white">
+                                <select id="plan" required class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-colors outline-none bg-white">
                                     <option value="" disabled selected>請選擇方案</option>
-                                    <option value="單堂">單堂 ($1,980)</option>
-                                    <option value="二堂合購">二堂合購 ($3,000)</option>
+                                    <option value="單堂報名 - 上午場 09:30-12:30 ($1,980)">單堂 ($1,980)</option>
+                                    <option value="二堂合購 - 上下午場 ($3,000)">二堂合購 ($3,000)</option>
                                 </select>
                             </div>
                             <div>
                                 <label for="payment" class="block text-sm font-medium text-gray-700 mb-1">付款方式 <span class="text-red-500">*</span></label>
-                                <select id="payment" name="付款方式" required class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-colors outline-none bg-white">
+                                <select id="payment" required class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-colors outline-none bg-white" onchange="toggleLast5()">
                                     <option value="" disabled selected>請選擇繳費方式</option>
-                                    <option value="轉帳匯款">轉帳匯款 (折100元)</option>
-                                    <option value="現場繳費">現場繳費 (原價)</option>
+                                    <option value="匯款/轉帳 (折$100)">轉帳匯款 (折100元)</option>
+                                    <option value="現場繳費 (原價)">現場繳費 (原價)</option>
                                 </select>
                             </div>
                         </div>
 
-                        <div>
-                            <label for="bankAccount" class="block text-sm font-medium text-gray-700 mb-1">帳號末5碼 (若選現場繳費請填「無」) <span class="text-red-500">*</span></label>
-                            <input type="text" id="bankAccount" name="帳號末5碼" required class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-colors outline-none" placeholder="例如：12345 或 無">
+                        <div id="last5Container">
+                            <label for="last5" class="block text-sm font-medium text-gray-700 mb-1">帳號末5碼 <span class="text-red-500">*</span></label>
+                            <input type="text" id="last5" maxlength="5" class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-colors outline-none" placeholder="例如：12345">
+                            <p class="text-xs text-gray-400 mt-1">若選現場繳費此欄可留空</p>
                         </div>
 
                         <div>
-                            <label for="painPoint" class="block text-sm font-medium text-gray-700 mb-1">獲客難題 <span class="text-red-500">*</span></label>
-                            <textarea id="painPoint" name="獲客難題" required rows="2" class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-colors outline-none resize-none" placeholder="請簡述您目前在行銷或客服上遇到的最大難題..."></textarea>
+                            <label for="problem" class="block text-sm font-medium text-gray-700 mb-1">獲客難題 <span class="text-red-500">*</span></label>
+                            <textarea id="problem" required rows="2" class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-colors outline-none resize-none" placeholder="請簡述您目前在行銷或客服上遇到的最大難題..."></textarea>
                         </div>
 
                         <div class="pt-2">
-                            <button type="submit" class="w-full bg-brand-600 hover:bg-brand-700 text-white font-bold text-lg py-3 rounded-xl transition-all shadow-lg shadow-brand-500/30 flex justify-center items-center gap-2">
+                            <button type="submit" id="submitBtn" class="w-full bg-brand-600 hover:bg-brand-700 text-white font-bold text-lg py-3 rounded-xl transition-all shadow-lg shadow-brand-500/30 flex justify-center items-center gap-2">
                                 送出報名資料 <i class="ph-bold ph-paper-plane-tilt"></i>
                             </button>
                             <p class="text-xs text-gray-500 text-center mt-3 flex items-center justify-center gap-1">
@@ -418,9 +374,7 @@
                 <i class="ph-bold ph-rocket-launch text-xl text-brand-500"></i>
                 <span class="font-bold text-gray-200">滔滔大聯盟</span>
             </div>
-            <div class="text-sm">
-                &copy; 2026 滔滔大聯盟. All rights reserved.
-            </div>
+            <div class="text-sm">&copy; 2026 滔滔大聯盟. All rights reserved.</div>
             <div class="flex gap-4 items-center">
                 <a href="https://lin.ee/ROG3mtx" target="_blank" class="hover:text-line-500 transition-colors flex items-center gap-1">
                     <i class="ph-fill ph-chat-circle-text text-2xl"></i>
@@ -432,8 +386,13 @@
         </div>
     </footer>
 
-    <!-- JavaScript logic -->
     <script>
+        // ============================================================
+        // ⚙️  設定區：填入你的 Apps Script Web App URL（與 google-seo 同一個）
+        // ============================================================
+        const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyNjyUIHs-q92f6UaPvdqXGOr97H3fUjnSWZtIf-_6fCycw8JS0xuv_PInj6mwOOcHE/exec';
+        // ============================================================
+
         // Navbar scroll effect
         window.addEventListener('scroll', () => {
             const nav = document.getElementById('navbar');
@@ -446,51 +405,67 @@
             }
         });
 
-        // 替換為你的 Google Apps Script 網址
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbwHTT1kAMgb4Phsh-9iuapH2auOr33FMrVVwttqvJS3NciJjpLGATjnvYiPasqmetHM/exec';
-
-        // Form submission handling to Google Sheets
-        function handleFormSubmit(event) {
-            event.preventDefault(); // 防止網頁重整
-            
-            const form = event.target;
-            const btn = form.querySelector('button[type="submit"]');
-            const originalText = btn.innerHTML;
-            
-            // 顯示載入中的按鈕狀態
-            btn.innerHTML = '<i class="ph-bold ph-spinner animate-spin"></i> 處理中...';
-            btn.disabled = true;
-
-            // 取得表單資料
-            const formData = new FormData(form);
-            
-            // 系統自動產生「報名場次」與「報名時間」
-            formData.append('報名場次', '電商神助手實戰營');
-            formData.append('報名時間', new Date().toLocaleString('zh-TW', { timeZone: 'Asia/Taipei', hour12: false }));
-
-            // 發送資料到 Google Apps Script
-            fetch(scriptURL, { 
-                method: 'POST', 
-                body: formData 
-            })
-            .then(response => {
-                // 顯示成功畫面
-                document.getElementById('success-overlay').classList.remove('hidden');
-                
-                // 重設表單與按鈕
-                form.reset();
-                btn.innerHTML = originalText;
-                btn.disabled = false;
-            })
-            .catch(error => {
-                console.error('Error!', error.message);
-                alert('網路連線發生錯誤，請稍後再試或透過 LINE 聯繫客服報名。');
-                
-                // 恢復按鈕狀態
-                btn.innerHTML = originalText;
-                btn.disabled = false;
-            });
+        // 付款方式切換帳號欄位
+        function toggleLast5() {
+            const payment = document.getElementById('payment').value;
+            const container = document.getElementById('last5Container');
+            const input = document.getElementById('last5');
+            if (payment.includes('現場')) {
+                container.style.display = 'none';
+                input.required = false;
+                input.value = '';
+            } else {
+                container.style.display = 'block';
+                input.required = true;
+            }
         }
+
+        // 表單送出
+        const form = document.getElementById('registration-form');
+        const submitBtn = document.getElementById('submitBtn');
+
+        form.addEventListener('submit', async function(e) {
+            e.preventDefault();
+
+            // 鎖定按鈕
+            const originalHtml = submitBtn.innerHTML;
+            submitBtn.innerHTML = '<i class="ph-bold ph-spinner animate-spin"></i> 處理中...';
+            submitBtn.disabled = true;
+
+            // 組成 JSON 資料（欄位名稱與 Apps Script 完全對應）
+            const payload = {
+                source:   'LINE OA AI 機器人建置課',
+                name:     document.getElementById('name').value.trim(),
+                phone:    document.getElementById('phone').value.trim(),
+                email:    document.getElementById('email').value.trim(),
+                lineId:   document.getElementById('lineId').value.trim(),
+                company:  document.getElementById('company').value.trim(),
+                industry: document.getElementById('industry').value,
+                plan:     document.getElementById('plan').value,
+                payment:  document.getElementById('payment').value,
+                last5:    document.getElementById('last5').value.trim() || '現場繳費',
+                problem:  document.getElementById('problem').value.trim(),
+            };
+
+            try {
+                await fetch(SCRIPT_URL, {
+                    method: 'POST',
+                    mode: 'no-cors',   // Apps Script 跨域必須 no-cors
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+                // no-cors 無法讀 response，直接當成成功
+                document.getElementById('success-overlay').classList.remove('hidden');
+                form.reset();
+                document.getElementById('last5Container').style.display = 'block';
+            } catch (err) {
+                console.error('送出失敗：', err);
+                alert('❌ 網路連線異常，請稍後再試，或直接加入客服 LINE 完成報名。');
+            } finally {
+                submitBtn.innerHTML = originalHtml;
+                submitBtn.disabled = false;
+            }
+        });
     </script>
 </body>
 </html>
