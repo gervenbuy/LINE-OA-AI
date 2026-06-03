@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="zh-TW" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【電商神助手實戰營】LINE 客服機器人 x 蝦皮 AI SEO | 從 0 到 1 打造自動化獲利引擎</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'Noto Sans TC', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            900: '#0c4a6e',
+                        },
+                        shopee: {
+                            500: '#ee4d2d',
+                            600: '#d73211',
+                        },
+                        line: {
+                            500: '#00B900',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom styles for smooth animations */
+        .fade-in-up {
+            animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        .delay-100 { animation-delay: 100ms; }
+        .delay-200 { animation-delay: 200ms; }
+        .delay-300 { animation-delay: 300ms; }
+        
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800 bg-gray-50 antialiased selection:bg-brand-500 selection:text-white">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white/90 backdrop-blur-md z-50 shadow-sm transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center gap-2 cursor-pointer" onclick="window.scrollTo(0,0)">
+                    <div class="bg-brand-600 text-white p-2 rounded-lg">
+                        <i class="ph-bold ph-rocket-launch text-2xl"></i>
+                    </div>
+                    <span class="font-bold text-xl tracking-tight text-gray-900">E-Com<span class="text-brand-600">Master</span></span>
+                </div>
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#pain-points" class="text-gray-600 hover:text-brand-600 font-medium transition-colors">賣家痛點</a>
+                    <a href="#syllabus" class="text-gray-600 hover:text-brand-600 font-medium transition-colors">課程架構</a>
+                    <a href="#benefits" class="text-gray-600 hover:text-brand-600 font-medium transition-colors">預期收穫</a>
+                    <a href="#register" class="bg-brand-600 hover:bg-brand-700 text-white px-6 py-2.5 rounded-full font-medium transition-all transform hover:scale-105 shadow-md shadow-brand-500/30">
+                        立即報名
+                    </a>
+                </div>
+                <!-- Mobile menu button (visual only for this demo) -->
+                <div class="md:hidden flex items-center">
+                    <button class="text-gray-600 hover:text-gray-900 focus:outline-none">
+                        <i class="ph ph-list text-3xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+        <!-- Background decorative elements -->
+        <div class="absolute top-0 left-0 w-full h-full bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-brand-100 via-white to-white -z-10"></div>
+        <div class="absolute -top-24 -right-24 w-96 h-96 bg-brand-200 rounded-full mix-blend-multiply filter blur-3xl opacity-50 animate-blob"></div>
+        <div class="absolute top-48 -left-24 w-72 h-72 bg-shopee-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-2000"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center max-w-4xl mx-auto fade-in-up">
+                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-50 border border-brand-100 text-brand-600 font-semibold text-sm mb-6 shadow-sm">
+                    <span class="relative flex h-3 w-3">
+                      <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-400 opacity-75"></span>
+                      <span class="relative inline-flex rounded-full h-3 w-3 bg-brand-500"></span>
+                    </span>
+                    2026 最新 AI 賦能電商實戰營
+                </div>
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-900 tracking-tight leading-tight mb-8">
+                    擺脫客服地獄，突破流量瓶頸<br class="hidden md:block" />
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-600 to-shopee-500">打造 0-1 自動化獲利引擎</span>
+                </h1>
+                <p class="text-lg md:text-xl text-gray-600 mb-10 max-w-2xl mx-auto leading-relaxed">
+                    結合 <strong class="text-line-500">LINE OA 機器人</strong> 防守客服人力，與 <strong class="text-shopee-500">蝦皮 AI SEO x AMS</strong> 進攻精準流量。這不只是一堂課，而是幫你建置一套 24 小時運轉的電商系統。
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="#register" class="bg-brand-600 hover:bg-brand-700 text-white text-lg px-8 py-4 rounded-xl font-bold transition-all transform hover:-translate-y-1 shadow-xl shadow-brand-500/30 flex items-center justify-center gap-2">
+                        搶佔限量席位 <i class="ph-bold ph-arrow-right"></i>
+                    </a>
+                    <a href="#syllabus" class="bg-white hover:bg-gray-50 text-gray-800 border border-gray-200 text-lg px-8 py-4 rounded-xl font-semibold transition-all shadow-sm flex items-center justify-center gap-2">
+                        查看課程大綱 <i class="ph-bold ph-book-open"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pain Points Section -->
+    <section id="pain-points" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in-up">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">做電商，你是否也遇到這些「瓶頸」？</h2>
+                <div class="w-24 h-1 bg-brand-500 mx-auto rounded-full"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Pain Point 1 -->
+                <div class="bg-gray-50 rounded-2xl p-8 border border-gray-100 hover:shadow-lg transition-shadow fade-in-up delay-100">
+                    <div class="w-14 h-14 bg-red-100 text-red-600 rounded-xl flex items-center justify-center mb-6 text-3xl">
+                        <i class="ph-fill ph-chats-circle"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">客服輪迴，心力交瘁</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        「請問有現貨嗎？」「出貨了嗎？」「尺寸怎麼選？」每天花大量時間回覆 80% 重複性的問題，根本沒時間思考行銷與選品。
+                    </p>
+                </div>
+                <!-- Pain Point 2 -->
+                <div class="bg-gray-50 rounded-2xl p-8 border border-gray-100 hover:shadow-lg transition-shadow fade-in-up delay-200">
+                    <div class="w-14 h-14 bg-orange-100 text-orange-600 rounded-xl flex items-center justify-center mb-6 text-3xl">
+                        <i class="ph-fill ph-trend-down"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">商品上架，宛如石沉大海</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        用心拍照寫文案，商品卻永遠排在搜尋頁面後幾頁。不知道蝦皮演算法要什麼，自然流量趨近於零，只能靠燒錢打廣告。
+                    </p>
+                </div>
+                <!-- Pain Point 3 -->
+                <div class="bg-gray-50 rounded-2xl p-8 border border-gray-100 hover:shadow-lg transition-shadow fade-in-up delay-300">
+                    <div class="w-14 h-14 bg-purple-100 text-purple-600 rounded-xl flex items-center justify-center mb-6 text-3xl">
+                        <i class="ph-fill ph-money"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">廣告費狂飆，利潤被吃光</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        站內關鍵字廣告點擊成本越來越高，轉單率卻沒提升。想找網紅合作帶貨又怕踩雷付了錢沒效果，不懂如何佈局站外分潤機制。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Course Syllabus Section -->
+    <section id="syllabus" class="py-20 bg-gray-900 text-white relative overflow-hidden">
+        <!-- decorative bg -->
+        <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16">
+                <span class="text-brand-400 font-semibold tracking-wider uppercase text-sm mb-2 block">Course Syllabus</span>
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">三大模組，對症下藥打造自動化營收</h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">從防守到進攻，觀念與實作工具雙軌並行，保證課後帶著成果走。</p>
+            </div>
+
+            <div class="space-y-8">
+                <!-- Module 1 -->
+                <div class="bg-gray-800 rounded-2xl p-8 md:p-10 border border-gray-700 flex flex-col md:flex-row gap-8 items-center transform transition duration-300 hover:scale-[1.01]">
+                    <div class="w-full md:w-1/3 flex flex-col items-center text-center">
+                        <div class="w-20 h-20 bg-line-500/20 text-line-500 rounded-full flex items-center justify-center text-4xl mb-4">
+                            <i class="ph-fill ph-robot"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2">模組一：防守篇</h3>
+                        <p class="text-line-500 font-medium">LINE OA x IA 客服機器人架設</p>
+                    </div>
+                    <div class="w-full md:w-2/3">
+                        <ul class="space-y-4 text-gray-300">
+                            <li class="flex items-start gap-3">
+                                <i class="ph-bold ph-check-circle text-brand-400 mt-1 flex-shrink-0"></i>
+                                <span><strong>基礎建設與分流：</strong>盤點 Top 10 常見問題，規劃圖文選單動線，引導顧客自主找答案。</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="ph-bold ph-check-circle text-brand-400 mt-1 flex-shrink-0"></i>
+                                <span><strong>IA 核心邏輯設定：</strong>拆解關鍵字回覆，設計「引導式客服腳本」，告別死板回覆。</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="ph-bold ph-check-circle text-brand-400 mt-1 flex-shrink-0"></i>
+                                <span><strong>人機協作與標籤：</strong>無縫轉交真人客服設定，並運用 Tag 精準紀錄需求，為再行銷鋪路。</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Module 2 -->
+                <div class="bg-gray-800 rounded-2xl p-8 md:p-10 border border-gray-700 flex flex-col md:flex-row gap-8 items-center transform transition duration-300 hover:scale-[1.01]">
+                    <div class="w-full md:w-1/3 flex flex-col items-center text-center">
+                        <div class="w-20 h-20 bg-shopee-500/20 text-shopee-500 rounded-full flex items-center justify-center text-4xl mb-4">
+                            <i class="ph-fill ph-magnifying-glass"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2">模組二：進攻篇</h3>
+                        <p class="text-shopee-500 font-medium">蝦皮商品 AI SEO 優化</p>
+                    </div>
+                    <div class="w-full md:w-2/3">
+                        <ul class="space-y-4 text-gray-300">
+                            <li class="flex items-start gap-3">
+                                <i class="ph-bold ph-check-circle text-brand-400 mt-1 flex-shrink-0"></i>
+                                <span><strong>底層邏輯破解：</strong>掌握蝦皮搜尋權重規則，發掘零銷量新品必爭的「長尾關鍵字」。</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="ph-bold ph-check-circle text-brand-400 mt-1 flex-shrink-0"></i>
+                                <span><strong>AI 提示詞實戰：</strong>獨家 ChatGPT/Gemini Prompt，一鍵生成高排名商品標題與五大賣點。</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="ph-bold ph-check-circle text-brand-400 mt-1 flex-shrink-0"></i>
+                                <span><strong>高轉換頁面佈局：</strong>首圖視覺設計訣竅、詳情頁痛點文案撰寫，建立信任感大幅提升轉換率。</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Module 3 -->
+                <div class="bg-gray-800 rounded-2xl p-8 md:p-10 border border-gray-700 flex flex-col md:flex-row gap-8 items-center transform transition duration-300 hover:scale-[1.01]">
+                    <div class="w-full md:w-1/3 flex flex-col items-center text-center">
+                        <div class="w-20 h-20 bg-yellow-500/20 text-yellow-500 rounded-full flex items-center justify-center text-4xl mb-4">
+                            <i class="ph-fill ph-share-network"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2">模組三：放大篇</h3>
+                        <p class="text-yellow-500 font-medium">AMS 聯盟行銷站外佈局</p>
+                    </div>
+                    <div class="w-full md:w-2/3">
+                        <ul class="space-y-4 text-gray-300">
+                            <li class="flex items-start gap-3">
+                                <i class="ph-bold ph-check-circle text-brand-400 mt-1 flex-shrink-0"></i>
+                                <span><strong>AMS 機制解析：</strong>看懂 CPS (只為成功訂單付費) 模式，免除無效點擊浪費預算。</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="ph-bold ph-check-circle text-brand-400 mt-1 flex-shrink-0"></i>
+                                <span><strong>佣金策略設定：</strong>爆品帶流量 vs 利潤款賺錢，如何設定精準分潤比例吸引推廣者。</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="ph-bold ph-check-circle text-brand-400 mt-1 flex-shrink-0"></i>
+                                <span><strong>SEO x AMS 綜效：</strong>為什麼做過 AI SEO 的頁面，網紅更願意主動幫你帶貨？觀念一次打通。</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Registration Form Section -->
+    <section id="register" class="py-24 bg-brand-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-3xl shadow-xl overflow-hidden flex flex-col md:flex-row">
+                <!-- Form Info Side -->
+                <div class="w-full md:w-5/12 bg-gradient-to-br from-brand-600 to-brand-900 text-white p-10 flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-3xl font-bold mb-4">立刻報名實戰營</h3>
+                        <p class="text-brand-100 mb-8 leading-relaxed">投資半天時間，建置幫你省下無數小時與廣告費的自動化系統。</p>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-center gap-4">
+                                <div class="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center flex-shrink-0">
+                                    <i class="ph-fill ph-calendar-blank text-xl"></i>
+                                </div>
+                                <div>
+                                    <p class="text-sm text-brand-200">課程日期 (可選)</p>
+                                    <p class="font-medium">2026/07/15 或 07/22</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <div class="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center flex-shrink-0">
+                                    <i class="ph-fill ph-clock text-xl"></i>
+                                </div>
+                                <div>
+                                    <p class="text-sm text-brand-200">上課時間</p>
+                                    <p class="font-medium">13:30 - 17:30 (共四小時)</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <div class="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center flex-shrink-0">
+                                    <i class="ph-fill ph-map-pin text-xl"></i>
+                                </div>
+                                <div>
+                                    <p class="text-sm text-brand-200">上課地點</p>
+                                    <p class="font-medium">Zoom 線上直播教室</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-12 pt-8 border-t border-brand-500/50">
+                        <p class="text-sm text-brand-200 mb-2">費用</p>
+                        <p class="text-3xl font-bold">NT$ 2,980 <span class="text-base font-normal line-through text-brand-300 ml-2">原價 $5,000</span></p>
+                    </div>
+                </div>
+                
+                <!-- Form Input Side -->
+                <div class="w-full md:w-7/12 p-10 relative">
+                    
+                    <!-- Success Message Overlay (Hidden by default) -->
+                    <div id="success-overlay" class="absolute inset-0 bg-white z-10 flex flex-col items-center justify-center p-8 text-center hidden">
+                        <div class="w-20 h-20 bg-green-100 text-green-500 rounded-full flex items-center justify-center text-5xl mb-6">
+                            <i class="ph-bold ph-check"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">報名資料已送出！</h3>
+                        <p class="text-gray-600 mb-6">感謝您的報名，我們已將付款資訊與課程詳細內容寄至您的信箱，請留意查收。</p>
+                        <button onclick="document.getElementById('success-overlay').classList.add('hidden')" class="bg-gray-100 hover:bg-gray-200 text-gray-800 px-6 py-2 rounded-lg font-medium transition-colors">
+                            關閉視窗
+                        </button>
+                    </div>
+
+                    <form id="registration-form" class="space-y-5" onsubmit="handleFormSubmit(event)">
+                        <div class="grid grid-cols-1 gap-5 sm:grid-cols-2">
+                            <div>
+                                <label for="firstName" class="block text-sm font-medium text-gray-700 mb-1">姓氏 <span class="text-red-500">*</span></label>
+                                <input type="text" id="firstName" required class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-colors outline-none" placeholder="王">
+                            </div>
+                            <div>
+                                <label for="lastName" class="block text-sm font-medium text-gray-700 mb-1">名字 <span class="text-red-500">*</span></label>
+                                <input type="text" id="lastName" required class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-colors outline-none" placeholder="小明">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-1">聯絡信箱 <span class="text-red-500">*</span></label>
+                            <input type="email" id="email" required class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-colors outline-none" placeholder="example@email.com">
+                        </div>
+
+                        <div>
+                            <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">手機號碼 <span class="text-red-500">*</span></label>
+                            <input type="tel" id="phone" required class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-colors outline-none" placeholder="0912345678">
+                        </div>
+
+                        <div>
+                            <label for="lineId" class="block text-sm font-medium text-gray-700 mb-1">LINE ID (選填，方便課前通知)</label>
+                            <input type="text" id="lineId" class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-colors outline-none" placeholder="您的 LINE ID">
+                        </div>
+
+                        <div>
+                            <label for="date" class="block text-sm font-medium text-gray-700 mb-1">選擇希望上課梯次 <span class="text-red-500">*</span></label>
+                            <select id="date" required class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-colors outline-none bg-white">
+                                <option value="" disabled selected>請選擇梯次</option>
+                                <option value="0715">第一梯次：2026/07/15 (三) 13:30-17:30</option>
+                                <option value="0722">第二梯次：2026/07/22 (三) 13:30-17:30</option>
+                            </select>
+                        </div>
+
+                        <div class="pt-4">
+                            <button type="submit" class="w-full bg-brand-600 hover:bg-brand-700 text-white font-bold text-lg py-3.5 rounded-xl transition-all shadow-lg shadow-brand-500/30 flex justify-center items-center gap-2">
+                                送出報名資料 <i class="ph-bold ph-paper-plane-tilt"></i>
+                            </button>
+                            <p class="text-xs text-gray-500 text-center mt-4 flex items-center justify-center gap-1">
+                                <i class="ph-fill ph-lock-key"></i> 您的資料僅作本次課程聯繫使用，絕不外流。
+                            </p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-10 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="flex items-center gap-2">
+                <i class="ph-bold ph-rocket-launch text-xl text-brand-500"></i>
+                <span class="font-bold text-gray-200">E-ComMaster 學院</span>
+            </div>
+            <div class="text-sm">
+                &copy; 2026 E-ComMaster. All rights reserved.
+            </div>
+            <div class="flex gap-4">
+                <a href="#" class="hover:text-white transition-colors"><i class="ph-fill ph-facebook-logo text-2xl"></i></a>
+                <a href="#" class="hover:text-white transition-colors"><i class="ph-fill ph-instagram-logo text-2xl"></i></a>
+                <a href="#" class="hover:text-white transition-colors"><i class="ph-fill ph-envelope-simple text-2xl"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript logic -->
+    <script>
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 10) {
+                nav.classList.add('shadow-md');
+                nav.classList.replace('bg-white/90', 'bg-white/95');
+            } else {
+                nav.classList.remove('shadow-md');
+                nav.classList.replace('bg-white/95', 'bg-white/90');
+            }
+        });
+
+        // Form submission handling (Mocking success)
+        function handleFormSubmit(event) {
+            event.preventDefault(); // Prevent page reload
+            
+            // Get button to show loading state (optional UX enhancement)
+            const btn = event.target.querySelector('button[type="submit"]');
+            const originalText = btn.innerHTML;
+            btn.innerHTML = '<i class="ph-bold ph-spinner animate-spin"></i> 處理中...';
+            btn.disabled = true;
+
+            // Simulate API call delay
+            setTimeout(() => {
+                // Show success overlay instead of alert()
+                document.getElementById('success-overlay').classList.remove('hidden');
+                
+                // Reset form and button
+                event.target.reset();
+                btn.innerHTML = originalText;
+                btn.disabled = false;
+            }, 1000);
+        }
+    </script>
+</body>
+</html>
